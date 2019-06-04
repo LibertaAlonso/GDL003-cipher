@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link rel="shortcut icon" href="password.png" />
+</head>
+
+<body>
+
     <div id="root">
-      <h1>Hola mundo!</h1>
+        <h1>Ingrese el texto</h1>
+
+        <textarea id="cadena"></textarea>
+
+        <div class="buttons">
+            <p>
+                <input type="button" id="btn0" value="Codificar" onclick="codificar()">
+                <input type="button" id="btn1" value="Decodificar" onclick="decodificar()">
+            </p>
+
+        </div>
+
+        <h1>Resultado</h1>
+        <div id="resultado"></div>
+        <textarea id="cadenaresul"></textarea>
+        <div id="resultadocade"></div>
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>
-  </body>
+</body>
+
 </html>
