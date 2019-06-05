@@ -11,22 +11,31 @@
 <body>
 
     <div id="root">
-        <h1>Ingrese el texto</h1>
 
-        <textarea id="cadena"></textarea>
-
-        <div class="buttons">
-            <p>
-                <input type="button" id="btn0" value="Codificar" onclick="codificar()">
-                <input type="button" id="btn1" value="Decodificar" onclick="decodificar()">
-            </p>
-
+      <div class="container">
+    <div class="form-inline">
+        <div class="form-group">
+            <h1>Ingrese su texto aquí:</h1>
+            <textarea  id="caesarShiftString" class="textarea" placeholder="Ingrese el mensaje"></textarea>
+            <p class="error" id="errorOffString">Debe ingresar una frase</p>
         </div>
 
-        <h1>Resultado</h1>
-        <div id="resultado"></div>
-        <textarea id="cadenaresul"></textarea>
-        <div id="resultadocade"></div>
+        <div class="form-group">
+          <p class>Desplazamiento:<input type="text" id="offsetCipher" class="textOffset"></p>
+          <p class="errorOffCipher" id="errrOffNumber">Debe ingresar un numero de desplazamiento</p>
+
+          <button onclick="validationInputCipher();">Cifrar</button>
+          <button onclick="validationInputDecipher();">Descifrar</button>
+
+          <h1>Texto cifrado:</h1>
+          <textarea id="caesarShiftResult" class="textarea"></textarea><br>
+          <button onclick="cleaningCipher();">Limpiar</button>
+        </div>
+
+    </div>
+</div>
+
+
     </div>
     <script src="cipher.js"></script>
     <script src="index.js"></script>

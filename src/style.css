@@ -3,7 +3,7 @@
     margin-top: 15px;
 }
 
-#btn0, #btn1 {
+#btnCodificar, #btnDecodificar {
   background-color: #AED6F1;
   width: 150px;
   font-size: 20px;
@@ -14,16 +14,28 @@
   padding: 10px 10px;
 }
 
-#btn0:hover, #btn1:hover {
+#btnCodificar:hover, #btnDescodificar:hover {
     cursor: pointer;
     background-color: #3498DB;
 }
 
-#btn0:focus, #btn1:focus {
+#btnCodificar:focus, #btnDescodificar:focus {
     outline: 0;
 }
 
-textarea {
+.textarea {
   width:650px;
   height: 100px;
+  font-family: Garamond,verdana;
+  font-size: 9pt;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 14px;
+
 }
