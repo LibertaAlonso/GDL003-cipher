@@ -11,7 +11,7 @@ const init = () =>
 
 
 
-/* capturando la frase a cifrar*/
+// Capturamos la frase a cifrar//
 const captureCipher=()=>{
 
 stringCipher= document.getElementById("caesarShiftString").value;
@@ -27,7 +27,7 @@ offsetC = parseInt(document.getElementById("offsetCipher").value);
 }
 
 
-/* capturando la frase a descifrar*/
+//Capturando la frase a descifrar//
 const captureDecipher=()=>{
 
     stringDecipher= document.getElementById("caesarShiftString").value;
@@ -65,7 +65,7 @@ return(cipher);
 
 }
 
-/* funcion descifrar*/
+//Funcion descifrar//
 const codeDecipher =(offset,string)=> {
 
 for(let i=0; i<string.length;i++){
@@ -87,7 +87,7 @@ for(let i=0; i<string.length;i++){
 }
 
 
-/* funcion validar entrada cifrar*/
+// Funcion validar entrada cifrar//
 const validationInputCipher =()=>{
   cipher = '';
 
