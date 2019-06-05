@@ -9,11 +9,11 @@
 </head>
 
 <body>
-
+   
     <div id="root">
 
       <div class="container">
-    <div class="form-inline">
+        <div class="form-inline">
         <div class="form-group">
             <h1>Ingrese su texto aquí:</h1>
             <textarea  id="caesarShiftString" class="textarea" placeholder="Ingrese el mensaje"></textarea>
@@ -24,12 +24,12 @@
           <p class>Desplazamiento:<input type="text" id="offsetCipher" class="textOffset"></p>
           <p class="errorOffCipher" id="errrOffNumber">Debe ingresar un numero de desplazamiento</p>
 
-          <button onclick="validationInputCipher();">Cifrar</button>
-          <button onclick="validationInputDecipher();">Descifrar</button>
+          <button  id= "btnEncode" onclick="validationInputCipher();">Cifrar</button>
+          <button  id="btnDecipher"onclick="validationInputDecipher();">Descifrar</button>
 
           <h1>Texto cifrado:</h1>
           <textarea id="caesarShiftResult" class="textarea"></textarea><br>
-          <button onclick="cleaningCipher();">Limpiar</button>
+          <button  id="btnClean"onclick="cleaningCipher();">Limpiar</button>
         </div>
 
     </div>
