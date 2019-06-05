@@ -43,7 +43,7 @@ const captureDecipher=()=>{
 
 
 
- /* funcion cifrar*/
+ /* Funcion cifrar*/
 const codeCipher =(offset,string)=> {
 
 for(let i=0; i<string.length;i++){
@@ -158,7 +158,7 @@ const validationInputDecipher =()=>{
 
     }
     else if (validationPhrase === '' && validationOffset === ''){
-       document.getElementById("error").style.display = 'block';
+       document.getElementById("errorOffString").style.display = 'block';
        document.getElementById("errrOffNumber").style.display = 'block';
        document.getElementById("caesarShiftResult").value = '';
 
