@@ -1,50 +1,49 @@
-/* inicializando variables */
-let x, asciiCode, offsetC, offsetD, stringCipher = '', cipher = '',deCipher= '', returnCipher, stringDecipher = '', returnDecipher;
+/***************************/
+/* Inicializando variables */
+/***************************/
+let offsetC,offsetD,stringCipher = '',returnCipher,stringDecipher = '',returnDecipher;
 
 
-/* Focus en textarea*/
-const init = () =>
-{
- document.getElementById("caesarShiftString").focus();
-
-}
-
-
-
-// Capturamos la frase a cifrar//
+/******************************/
+/*Capturamos la frase a cifrar*/
+/*******************************/
 const captureCipher=()=>{
 
 stringCipher= document.getElementById("caesarShiftString").value;
-
 stringCipher = stringCipher.toUpperCase().trim();
 
-
+/********************/
 /* offset de cifrado*/
-offsetC = parseInt(document.getElementById("offsetCipher").value);
+/********************/
 
- returnCipher =  codeCipher(offsetC,stringCipher);
+ offsetC = parseInt(document.getElementById("offsetCipher").value);
+ returnCipher =  encode(offsetC,stringCipher);
  document.getElementById("caesarShiftResult").value = returnCipher;
-}
+};
 
-
-//Capturando la frase a descifrar//
+/*********************************/
+/*Capturando la frase a descifrar*/
+/*********************************/
 const captureDecipher=()=>{
 
     stringDecipher= document.getElementById("caesarShiftString").value;
     stringDecipher = stringDecipher.toUpperCase().trim();
 
+/*******************/
+/* offset descifrar*/
+/*******************/
 
-    /* offset descifrar*/
     offsetD = parseInt(document.getElementById("offsetCipher").value);
-
-    returnDecipher =  codeDecipher(offsetD,stringDecipher);
+    returnDecipher =  decode(offsetD,stringDecipher);
      document.getElementById("caesarShiftResult").value = returnDecipher;
-    }
+   };
 
 
+/******************/
+/* Funcion cifrar*/
+/******************/
 
- /* Funcion cifrar*/
-const codeCipher =(offset,string)=> {
+/*const encode=(offset,string)=> {
 
 for(let i=0; i<string.length;i++){
 
@@ -63,10 +62,13 @@ for(let i=0; i<string.length;i++){
 
 return(cipher);
 
-}
+};*/
+/*******************/
+/*Funcion descifrar*/
+/*******************/
 
-//Funcion descifrar//
-const codeDecipher =(offset,string)=> {
+/*const decode =(offset,string)=> {
+
 
 for(let i=0; i<string.length;i++){
    x = string.charCodeAt(i);
@@ -84,26 +86,31 @@ for(let i=0; i<string.length;i++){
 
   return(deCipher);
 
-}
+};*/
 
 
-// Funcion validar entrada cifrar//
+
+/*********************************/
+/* Funcion validar entrada cifrar*/
+/*********************************/
+
 const validationInputCipher =()=>{
-  cipher = '';
 
-  let validationPhrase, validationOffset;
-  validationPhrase = document.getElementById("caesarShiftString").value;
-  validationOffset = document.getElementById("offsetCipher").value;
+    validationOffset = document.getElementById("offsetCipher").value;
+
+/*  let validationString, validationOffset;
+  validationString = document.getElementById("caesarShiftString").value;
+  validationOffset = document.getElementById("offsetCipher").value;*/
 
 
-  if (validationPhrase === '' && validationOffset !== ''){
+  if (validationString === '' && validationOffset !== ''){
      document.getElementById("errorOffString").style.display = 'block';
      document.getElementById("errorOffString").value = '';
      document.getElementById("caesarShiftResult").value = '';
      document.getElementById("caesarShiftString").focus();
 
   }
-    else if (validationPhrase !== '' && validationOffset === '' ){
+    else if (validationString !== '' && validationOffset === '' ){
 
      document.getElementById("errorOffString").style.display = 'none';
      document.getElementById("errrOffNumber").style.display = 'block';
@@ -111,7 +118,7 @@ const validationInputCipher =()=>{
      document.getElementById("offsetCipher").focus();
 
   }
-  else if (validationPhrase === '' && validationOffset === ''){
+  else if (validationString === '' && validationOffset === ''){
      document.getElementById("errorOffString").style.display = 'block';
      document.getElementById("errrOffNumber").style.display = 'block';
      document.getElementById("caesarShiftResult").value = '';
@@ -121,10 +128,20 @@ const validationInputCipher =()=>{
     document.getElementById("errorOffString").style.display = 'none';
     document.getElementById("errrOffNumber").style.display = 'none';
 
-    captureCipher();}
-}
+    captureCipher();
+  }
+};
 
-/* funcion limpiar campos cifrar*/
+let validationString,validationOffset;
+validationString = document.getElementById("buttonEncode");
+validationString.addEventListener("click", validationInputCipher);
+
+
+
+
+/********************************/
+/*Funcion limpiar campos cifrar*/
+/********************************/
 const cleaningCipher = () =>{
 
   document.getElementById("caesarShiftString").value = '';
@@ -134,30 +151,36 @@ const cleaningCipher = () =>{
   document.getElementById("errrOffNumber").style.display = 'none';
   document.getElementById("caesarShiftString").focus();
 
+};
 
-}
+let cleanCipher;
+cleanCipher = document.getElementById("buttonClean");
+cleanCipher.addEventListener("click", cleaningCipher);
 
-/* funcion validar entrada descifrar*/
+
+/************************************/
+/* Funcion validar entrada descifrar*/
+/************************************/
 const validationInputDecipher =()=>{
-    deCipher = '';
-    let validationPhrase, validationOffset;
-    validationPhrase = document.getElementById("caesarShiftString").value;
+    //deCipher = '';
+    let validationString, validationOffset;
+    validationString = document.getElementById("caesarShiftString").value;
     validationOffset = document.getElementById("offsetCipher").value;
 
-    if (validationPhrase === '' && validationOffset !== ''){
+    if (validationString === '' && validationOffset !== ''){
        document.getElementById("errorOffString").style.display = 'block';
        document.getElementById("errrOffNumber").value = '';
        document.getElementById("caesarShiftResult").value = '';
 
     }
-      else if (validationPhrase !== '' && validationOffset === '' ){
+      else if (validationString !== '' && validationOffset === '' ){
 
        document.getElementById("errorOffString").style.display = 'none';
        document.getElementById("errrOffNumber").style.display = 'block';
        document.getElementById("offsetCipher").value = '';
 
     }
-    else if (validationPhrase === '' && validationOffset === ''){
+    else if (validationString === '' && validationOffset === ''){
        document.getElementById("errorOffString").style.display = 'block';
        document.getElementById("errrOffNumber").style.display = 'block';
        document.getElementById("caesarShiftResult").value = '';
@@ -169,4 +192,7 @@ const validationInputDecipher =()=>{
       captureDecipher();
     }
 
-  }
+  };
+
+  validationString = document.getElementById("buttonDecode");
+  validationString.addEventListener("click", validationInputDecipher);
