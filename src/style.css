@@ -3,7 +3,8 @@ html, body {
   padding: 0;
   height: 100vh;
   height: 100%;
-  background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+  background-image: url(email.png);
+  /*background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100*/
   font-family: Helvetica, sans-serif;
   font-weight: 100;
 }
@@ -46,14 +47,12 @@ h2 {
   font-size: 16px;
   font-family: Helvetica, sans-serif;
   font-weight: 100;
-  color: #fff;
+  color: # #2c3e50;
   background: rgba(255,255,255,0.1);
   word-break: normal;
   -webkit-box-shadow: inset 0px 0px 1px 1px transparent;
   box-shadow: inset 0px 0px 1px 1px transparent;
-  -webkit-animation: 1s fadeInOut linear 2 forwards;
-  animation: 1s fadeInOut linear 2 forwards;
-}
+  }
 
 #caesarShiftResult {
   min-width: 50vw;
@@ -71,13 +70,10 @@ h2 {
   font-size: 16px;
   font-family: Helvetica, sans-serif;
   font-weight: 100;
-  color: #fff;
- background: rgba(255,255,255,0.050);
+  color: #2c3e50 ;
+  background: rgba(255,255,255,0.050);
   word-break: normal;
   -webkit-box-shadow: inset 0px 0px 1px 1px transparent;
-  box-shadow: inset 0px 0px 1px 1px transparent;
-  -webkit-animation: 1s fadeInOut linear 2 forwards;
-  animation: 1s fadeInOut linear 2 forwards;
 }
 
 #encrypt {
