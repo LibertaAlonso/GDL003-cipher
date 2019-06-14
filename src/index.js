@@ -7,15 +7,16 @@ let offsetC, offsetD, stringCipher = '',stringDecipher = '',returnCipher, return
 /*Capturamos la frase a cifrar*/
 /*******************************/
 const captureCipher = () => {
-
+	
 	stringCipher = document.getElementById("caesarShiftString").value;
 	stringCipher = stringCipher.toUpperCase().trim();
 
 	/* offset de cifrado*/
-	
+
 	offsetC = parseInt(document.getElementById("offsetCipher").value);
-	returnCipher = codeCipher(offsetC, stringCipher);
+	returnCipher = window.cipher.encode(offsetC, stringCipher);
 	document.getElementById("caesarShiftResult").value = returnCipher;
+
 };
 
 /*********************************/
@@ -29,7 +30,7 @@ const captureDecipher = () => {
 	/* offset descifrar*/
 
 	offsetD = parseInt(document.getElementById("offsetCipher").value);
-	returnDecipher = codeDecipher(offsetD, stringDecipher);
+	returnDecipher = window.cipher.decode(offsetD, stringDecipher);
 	document.getElementById("caesarShiftResult").value = returnDecipher;
 };
 
@@ -79,7 +80,7 @@ validationString.addEventListener("click", validationInputCipher);
 
 
 /********************************/
-/*Funcion limpiar campos cifrar*/
+/*Funcion limpiar campos cifrar */
 /********************************/
 const cleaningCipher = () => {
 

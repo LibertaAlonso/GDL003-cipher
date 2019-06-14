@@ -1,3 +1,4 @@
+
 window.cipher = {
 	encode: (offset, string) => {
 		let x, asciiCode, cipher = '';
