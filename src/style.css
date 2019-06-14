@@ -99,10 +99,12 @@ h2 {
 }
 
 #buttonEncode {
-	background-color: #f5f58a;
+	/*background-color: #f5f58a;*/
+	background-color: #f4f6f6;
 	width: 40px;
 	height: 40px;
-	border: 1px solid #f1c40f;
+	/*border: 1px solid #f1c40f;*/
+	border: 1px solid #f9f9f4;
 	border-radius: 12px;
 	margin: 2px 20px 2px 0px;
 	padding: 10px 10px;
@@ -111,10 +113,12 @@ h2 {
 }
 
 #buttonDecode {
-	background-color: #f5f58a;
+	/*background-color: #f5f58a;*/
+	background-color: #f4f6f6;
 	width: 40px;
 	height: 40px;
-	border: 1px solid #f1c40f;
+	/*border: 1px solid #f1c40f;*/
+	border: 1px solid #f9f9f4;
 	border-radius: 12px;
 	margin: 2px 20px 2px 0px;
 	padding: 5px 5px;
@@ -123,10 +127,9 @@ h2 {
 }
 
 #buttonClean {
-	background-color: #fafaf3;
+	background-color: #f4f6f6 ;
 	width: 40px;
 	height: 40px;
-	font-size: 20px;
 	border: 1px solid #f9f9f4;
 	border-radius: 12px;
 	margin: 2px 20px 2px 0px;
@@ -145,7 +148,7 @@ h2 {
 	background-color: #f1c40f;
 }
 
-#btnClean:hover {
+#buttonClean:hover {
 	cursor: pointer;
 	background-color: #abebc6;
 }
