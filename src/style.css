@@ -1,140 +1,124 @@
-html,
-body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	height: 100%;
-	background-image: url(email.png);
-	font-family: Helvetica, sans-serif;
-	font-weight: 100;
-}
+/*----------------*
+/*----  MAIN  ---*/
+/*----------------*/
 
-.container {
-	position: absolute;
-	max-width: auto;
-	max-height: auto;
-	left: 50%;
-	top: 90%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #EBEBEB;
+	color: #555;
+	background-image: url(email.png);
 }
 
 h1 {
-	font-family: Helvetica, sans-serif;
+	margin: 0;
+	font-size: 5em;
+	font-weight: bold;
 	text-align: center;
+	background-image: url("security.png");
+	background-repeat: no-repeat;
+}
+
+h1>span {
+	font-size: 15px;
 }
 
 h2 {
-	font-family: Helvetica, sans-serif;
-	font-size: 35px;
+	margin: 0;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
 }
 
-#offsetCipher {
-	font-family: Helvetica, sans-serif;
-	font-size: 20;
+h2>span {
+	font-size: 10px;
 }
 
-#caesarShiftString {
-	min-width: 50vw;
-	max-width: 50vw;
-	min-height: 25vh;
-	max-height: 25vh;
-	padding: 25px;
-	margin: 0 0 0 0;
-	border: none;
-	border-radius: 0;
-	border-top-right-radius: 4px;
-	border-top-left-radius: 4px;
-	outline: none;
-	resize: none;
-	font-size: 20px;
-	font-family: Helvetica, sans-serif;
-	font-weight: 100;
-	color: # #2c3e50;
-	background: rgba(255, 255, 255, 0.1);
-	word-break: normal;
-	-webkit-box-shadow: inset 0px 0px 1px 1px transparent;
-	box-shadow: inset 0px 0px 1px 1px transparent;
-}
-
-#caesarShiftResult {
-	min-width: 50vw;
-	max-width: 50vw;
-	min-height: 25vh;
-	max-height: 25vh;
-	padding: 25px;
-	margin: 0 0 0 0;
-	border: none;
-	border-radius: 0;
-	border-top-right-radius: 4px;
-	border-top-left-radius: 4px;
-	outline: none;
-	resize: none;
-	font-size: 20px;
-	font-family: Helvetica, sans-serif;
-	font-weight: 100;
-	color: #2c3e50;
+textArea {
+	font-size: 16px;
+	width: 385px;
+	height: 200px;
 	background: rgba(255, 255, 255, 0.050);
 	word-break: normal;
 	-webkit-box-shadow: inset 0px 0px 1px 1px transparent;
 }
 
-#encrypt {
-	margin-left: 10%;
+span {
+	font-size: 20px;
 }
 
-#data {
-	margin-top: 5px;
+hr {
+	border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-#offsetCipher {
-	margin-right: 10px;
+#content {
+	width: 75%;
+	margin: 0 auto;
 }
 
-.header {
-	text-align: center;
-	margin: 1em 0;
-	font-size: 30px;
+.main-header {
+	margin: 40px 0;
 }
 
-#buttonEncode,#buttonDecode {
-	background-color: #f4f6f6;
-	width: 40px;
-	height: 40px;
-	border: 1px solid #f9f9f4;
-	border-radius: 12px;
-	margin: 2px 20px 2px 0px;
-	padding: 10px 10px;
-	background-image:url("locke.png");
-  background-repeat:no-repeat;
+
+/*----------------*/
+/*----  CARDS  ---*/
+/*----------------*/
+
+.card {
+	position: relative;
+	background-color: #FFF;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 3px;
+	width: 45%;
+	float: left;
+	margin-right: 3%;
+	margin-bottom: 40px;
+	z-index: 10;
+	transition: all 150ms ease-out;
+	background: rgba(255, 255, 255, 0.050);
+	word-break: normal;
+	-webkit-box-shadow: inset 0px 0px 1px 1px transparent;
 }
 
-#buttonDecode {
-	background-color: #f4f6f6;
-	width: 40px;
-	height: 40px;
-	border: 1px solid #f9f9f4;
-	border-radius: 12px;
-	margin: 2px 20px 2px 0px;
-	padding: 5px 5px;
-	background-image:url("locked.png");
-  background-repeat:no-repeat;
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
-#buttonClean {
-	background-color: #f4f6f6 ;
-	width: 40px;
-	height: 40px;
-	border: 1px solid #f9f9f4;
-	border-radius: 12px;
-	margin: 2px 20px 2px 0px;
-	padding: 5px 5px;
-	background-image:url("refresh.png");
-  background-repeat:no-repeat;
+.card-content {
+	padding: 30px;
 }
 
-#buttonEncode:hover,#buttonDecode:hover  {
+.card.special .card-content {
+	padding-top: 0;
+}
+
+.card-header {
+	background-color: #6BC7E5;
+	margin-bottom: 8px;
+	padding: 5px;
+	border-radius: 3px 3px 0 0
+}
+
+.card-header>p {
+	color: #FFF;
+	margin: 0;
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+.card:last-child {
+	margin-right: 0;
+}
+
+
+/*----------------*/
+/*SPECIAL COLORING*/
+/*----------------*/
+
+#buttonEncode:hover,
+#buttonDecode:hover {
 	cursor: pointer;
 	background-color: #f1c40f;
 }
@@ -144,15 +128,182 @@ h2 {
 	background-color: #abebc6;
 }
 
-#buttonEncode:focus,#buttonDecode:focus,#buttonClean:focus {
+#buttonEncode:focus,
+#buttonDecode:focus,
+#buttonClean:focus {
 	outline: 0;
+}
+
+
+/*----------------*/
+/*---  BUTTON  --*/
+/*----------------*/
+
+#buttonEncode {
+	width: 10%;
+	margin-top: 10px;
+	padding: 15px 0;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	background-image: url("locke.png");
+	background-repeat: no-repeat;
+	background-color: #f4f6f6;
+}
+
+#buttonDecode {
+	width: 10%;
+	margin-top: 10px;
+	padding: 15px 0;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	background-image: url("locked.png");
+	background-repeat: no-repeat;
+	background-color: #f4f6f6;
+}
+
+#buttonClean {
+	width: 10%;
+	height: 30%;
+	margin-top: 10px;
+	padding: 15px 0;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	color: white;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	background-image: url("refresh.png");
+	background-repeat: no-repeat;
+	background-color: #f4f6f6;
+}
+
+
+/*----------------*/
+/*----  MEDAL  ---*/
+/*----------------*/
+
+.medal {
+	position: absolute;
+	top: -10px;
+	right: -10px;
+	z-index: 20;
+}
+
+.medal-outer {
+	width: 40px;
+	height: 40px;
+	background-color: #F5D800;
+	border-radius: 100%;
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.27);
+}
+
+.medal-inner {
+	width: 26px;
+	height: 26px;
+	background-color: #FAE928;
+	border-radius: 100%;
+	margin: 0 auto;
+	position: relative;
+	top: 7px;
+}
+
+.ribbons {
+	position: relative;
+	left: 5px;
+	top: -10px;
+	z-index: -1;
+}
+
+.ribbon {
+	width: 15px;
+	position: relative;
+	box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.27);
+	transition: transform 200ms;
+	float: left;
+}
+
+.ribbon.left {
+	height: 30px;
+	background-color: #D96666;
+	transform-origin: center top;
+	animation: swing-left 2s infinite;
+	animation-direction: alternate;
+	margin-left: 50px;
+}
+
+.ribbon.right {
+	margin-left: -30px;
+	height: 35px;
+	opacity: 0.9;
+	background-color: #E56B6B;
+	transform-origin: center top;
+	animation: swing-right 2s infinite;
+	animation-direction: alternate;
+}
+
+
+/*----------------*/
+/*-- ANIMATIONS  -*/
+/*----------------*/
+
+@keyframes swing-left {
+	0% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(5deg);
+	}
+}
+
+@keyframes swing-right {
+	0% {
+		transform: rotate(-7deg);
+	}
+	100% {
+		transform: rotate(7deg);
+	}
+}
+
+
+/*----------------*/
+/*-- RESPONSIVE  -*/
+/*----------------*/
+
+@media (max-width: 900px) {
+	.card {
+		width: 100%;
+	}
+}
+
+
+/*-------------*/
+/*--- Input ---*/
+/*-------------*/
+
+.number {
+	font-size: 16px;
 }
 
 .error {
 	display: none;
 	color: #e53708;
-	font-size: 20px;
+	font-size: 12px;
 	font-weight: bold;
+}
+
+.imag .error {
+	float: right;
+	display: none;
 }
 
 input[type=text]:focus {
@@ -172,15 +323,6 @@ input[type=text] {
 	padding: 20px 20px 20px 40px;
 	-webkit-transition: width 0.4s ease-in-out;
 	transition: width 0.4s ease-in-out;
-	background-image:url("key1.png");
-  background-repeat:no-repeat;
-}
-
-.number{
-	font-size: 25px;
-	font-family: Helvetica, sans-serif;
-}
-p {
-	font-size: 25px;
-	font-family: Helvetica, sans-serif;
+	background-image: url("key1.png");
+	background-repeat: no-repeat;
 }

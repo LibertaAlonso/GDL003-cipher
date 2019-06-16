@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Caesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="lock.png" />
-</head>
-<body>
-
-<header class="header">
-  <h1>CESAR CIPHER</h1>
-</header>
-
-          <div class="container">
-            <h2>Cifrado</h2>
-            <textarea  id="caesarShiftString" class="textarea" placeholder="Ingrese el mensaje a cifrar..."></textarea>
-            <br>
-            <p class="error" id="errorOffString">Debe ingresar una frase</p>
-            <br>
-            <button id="buttonEncode"></button>
-          <h2>Decifrado</h2>
-          <textarea id="caesarShiftResult" class="textarea" placeholder="El mensaje descifrado es..."></textarea>
-          <button id="buttonDecode"></button>
-          <button  id="buttonClean"></button>
-            <p class="error" id="errrOffNumber">Debe ingresar un número de desplazamiento</p>
-            <br>
-            <p class="number">Introduzca el número de desplazamiento:<input  type="text" id="offsetCipher" placeholder=""></p>
-
-      </div>
-
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-</body>
+   <head>
+      <meta charset="utf-8">
+      <title>Caesar Cipher</title>
+      <link rel="stylesheet" href="style.css" />
+      <link rel="shortcut icon" href="document.png" />
+   </head>
+   <body>
+      <h1 class="main-header">Caesar-Cipher</h1>
+      <section id="content">
+         <div class="card">
+            <div class="card-content">
+               <h2>Cifrado</h2>
+               <hr>
+               <p class="error" id="errorOffString"><img src="warning.png"/>Debe ingresar una frase</p>
+               <hr>
+               <div class="card-info">
+                  <textarea  id="caesarShiftString" class="textarea" placeholder="Ingrese el mensaje a cifrar..."></textarea>
+               </div>
+               <p class="number">Introduzca el número de desplazamiento:<input  type="text" id="offsetCipher" placeholder="">
+                  <img ="warning.png">
+               </p>
+               <button id="buttonEncode"></button>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-content">
+               <h2>Decifrado</h2>
+               <hr>
+               <p class="error" id="errrOffNumber">
+                  <image src="warning.png">
+                  Debe ingresar un número de desplazamiento
+               </p>
+               <hr>
+               <div class="card-info">
+                  <textarea class="textArea" id="caesarShiftResult" placeholder="Ingrese el mensaje a decsifrar..."></textarea>
+               </div>
+               <p class="number">Introduzca el número de desplazamiento:<input  type="text" id="offsetCipher" placeholder=""></p>
+               <button id="buttonDecode"></button>
+               <button id="buttonClean"></button>
+            </div>
+         </div>
+      </section>
+      <script src="cipher.js"></script>
+      <script src="index.js"></script>
+   </body>
 </html>
