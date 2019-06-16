@@ -40,7 +40,7 @@ h2 {
 	max-width: 50vw;
 	min-height: 25vh;
 	max-height: 25vh;
-	padding: 20px;
+	padding: 25px;
 	margin: 0 0 0 0;
 	border: none;
 	border-radius: 0;
@@ -63,7 +63,7 @@ h2 {
 	max-width: 50vw;
 	min-height: 25vh;
 	max-height: 25vh;
-	padding: 20px;
+	padding: 25px;
 	margin: 0 0 0 0;
 	border: none;
 	border-radius: 0;
@@ -98,12 +98,10 @@ h2 {
 	font-size: 30px;
 }
 
-#buttonEncode {
-	/*background-color: #f5f58a;*/
+#buttonEncode,#buttonDecode {
 	background-color: #f4f6f6;
 	width: 40px;
 	height: 40px;
-	/*border: 1px solid #f1c40f;*/
 	border: 1px solid #f9f9f4;
 	border-radius: 12px;
 	margin: 2px 20px 2px 0px;
@@ -113,11 +111,9 @@ h2 {
 }
 
 #buttonDecode {
-	/*background-color: #f5f58a;*/
 	background-color: #f4f6f6;
 	width: 40px;
 	height: 40px;
-	/*border: 1px solid #f1c40f;*/
 	border: 1px solid #f9f9f4;
 	border-radius: 12px;
 	margin: 2px 20px 2px 0px;
@@ -138,12 +134,7 @@ h2 {
   background-repeat:no-repeat;
 }
 
-#buttonEncode:hover {
-	cursor: pointer;
-	background-color: #f1c40f;
-}
-
-#buttonDecode:hover {
+#buttonEncode:hover,#buttonDecode:hover  {
 	cursor: pointer;
 	background-color: #f1c40f;
 }
@@ -153,15 +144,7 @@ h2 {
 	background-color: #abebc6;
 }
 
-#buttonEncode:focus {
-	outline: 0;
-}
-
-#buttonDecode:focus {
-	outline: 0;
-}
-
-#btnClean:focus {
+#buttonEncode:focus,#buttonDecode:focus,#buttonClean:focus {
 	outline: 0;
 }
 
@@ -177,26 +160,27 @@ input[type=text]:focus {
 }
 
 input[type=text] {
-	width: 100px;
-	height: 20px;
+	width: 45px;
+	height: 35px;
 	box-sizing: border-box;
 	border: 2px solid #aed6f1;
 	border-radius: 4px;
-	font-size: 15px;
+	font-size: 20px;
 	background-color: #eceff1;
-	/*background-image: url('padlock.png');*/
-	background-position: 10px 10px;*/
+	background-position: 10px 10px;
 	background-repeat: no-repeat;
-	padding: 12px 20px 12px 40px;
+	padding: 20px 20px 20px 40px;
 	-webkit-transition: width 0.4s ease-in-out;
 	transition: width 0.4s ease-in-out;
+	background-image:url("key1.png");
+  background-repeat:no-repeat;
 }
 
-.numero{
-	font-size: 20px;
+.number{
+	font-size: 25px;
 	font-family: Helvetica, sans-serif;
 }
 p {
-	font-size: 16px;
+	font-size: 25px;
 	font-family: Helvetica, sans-serif;
 }
